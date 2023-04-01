@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technical Documentation Page</title>
+    <link rel="stylesheet" type="text/css" href="index.css" media="screen" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>CSS Background</header>
+      <ul>
+        <a class="nav-link" href="#Background_Color">
+          <li>Background Color</li>
+        </a>
+        <a class="nav-link" href="#Background_Image">
+          <li>Background Image</li>
+        </a>
+
+        <a class="nav-link" href="#Repeat_Horizontally_or_Vertically">
+          <li>
+            <i class="nav-link-bg-image"></i>Repeat Horizontally or Vertically
+          </li>
+        </a>
+        <a class="nav-link" href="#Set_position_and_no-repeat">
+          <li><i class="nav-link-bg-image"></i>Set position and no-repeat</li>
+        </a>
+        <a class="nav-link" href="#Fixed_position">
+          <li><i class="nav-link-bg-image"></i>Fixed position</li>
+        </a>
+
+        <a class="nav-link" href="#Shorthand_property">
+          <li>Shorthand property</li>
+        </a>
+        <a class="nav-link" href="#All_Properties">
+          <li>All Properties</li>
+        </a>
+        <a class="nav-link" href="#Reference">
+          <li>Reference</li>
+        </a>
+      </ul>
+    </nav>
+
+    <main id="main-doc">
+      <section class="main-section" id="Background_Color">
+        <header class="section-header">Background Color</header>
+        <article>
+          <p>
+            The background-color property specifies the background color of an
+            element.
+          </p>
+          <p>The background color of a page is set like this:</p>
+          <pre><code>body {
+  background-color: lightblue;
+}</code></pre>
+          <p>With CSS, a color is most often specified by:</p>
+          <ul>
+            <li>a valid color name - like "red"</li>
+            <li>a HEX value - like "#ff0000"</li>
+            <li>an RGB value - like "rgb(255,0,0)"</li>
+          </ul>
+          <p>
+            Look at CSS Color Values for a complete list of possible color
+            values.
+          </p>
+          <p>
+            In the example below, the h1, p, and div elements have different
+            background colors:
+          </p>
+          <pre><code>h1 {
+  background-color: green;
+}
+
+div {
+  background-color: lightblue;
+}
+
+p {
+  background-color: yellow;
+}</code></pre>
+        </article>
+      </section>
+
+      <section class="main-section" id="Background_Image">
+        <header class="section-header">Background Image</header>
+        <article>
+          <p>
+            The background-image property specifies an image to use as the
+            background of an element.
+          </p>
+          <p>
+            By default, the image is repeated so it covers the entire element.
+          </p>
+          <p>The background image for a page can be set like this:</p>
+
+          <pre><code>body {
+  background-image: url("paper.gif");
+}</code></pre>
+          <p>
+            Below is an example of a bad combination of text and background
+            image. The text is hardly readable:
+          </p>
+          <pre><code>body {
+  background-image: url("bgdesert.jpg");
+}</code></pre>
+          <p>
+            Note: When using a background image, use an image that does not
+            disturb the text.
+          </p>
+        </article>
+      </section>
+
+      <section class="main-section" id="Repeat_Horizontally_or_Vertically">
+        <header class="section-header">
+          Repeat Horizontally or Vertically
+        </header>
+        <article>
+          <p>
+            By default, the background-image property repeats an image both
+            horizontally and vertically.
+          </p>
+          <p>
+            Some images should be repeated only horizontally or vertically, or
+            they will look strange, like this:
+          </p>
+          <pre><code>body {
+  background-image: url("gradient_bg.png");
+}</code></pre>
+          <p>
+            If the image above is repeated only horizontally (background-repeat:
+            repeat-x;), the background will look better:
+          </p>
+          <pre><code>body {
+  background-image: url("gradient_bg.png");
+  background-repeat: repeat-x;
+}</code></pre>
+          <p>
+            Tip: To repeat an image vertically, set background-repeat: repeat-y;
+          </p>
+        </article>
+      </section>
+
+      <section class="main-section" id="Set_position_and_no-repeat">
+        <header class="section-header">Set position and no-repeat</header>
+        <article>
+          <p>
+            Showing the background image only once is also specified by the
+            background-repeat property:
+          </p>
+          <pre><code>body {
+  background-image: url("img_tree.png");
+  background-repeat: no-repeat;
+}</code></pre>
+          <p>
+            In the example above, the background image is shown in the same
+            place as the text. We want to change the position of the image, so
+            that it does not disturb the text too much.
+          </p>
+          <p>
+            The position of the image is specified by the background-position
+            property:
+          </p>
+          <pre><code>body {
+  background-image: url("img_tree.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+}</code></pre>
+        </article>
+      </section>
+
+      <section class="main-section" id="Fixed_position">
+        <header class="section-header">Fixed position</header>
+        <article>
+          <p>
+            To specify that the background image should be fixed (will not
+            scroll with the rest of the page), use the background-attachment
+            property:
+          </p>
+          <pre><code>body {
+  background-image: url("img_tree.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
+}</code></pre>
+        </article>
+      </section>
+
+      <section class="main-section" id="Shorthand_property">
+        <header class="section-header">Shorthand property</header>
+        <article>
+          <p>
+            To shorten the code, it is also possible to specify all the
+            background properties in one single property. This is called a
+            shorthand property.
+          </p>
+          <p>The shorthand property for background is background:</p>
+          <pre><code>body {
+  background: #ffffff url("img_tree.png") no-repeat right top;
+}</code></pre>
+          <p>
+            When using the shorthand property the order of the property values
+            is:
+          </p>
+          <ul>
+            <li>background-color</li>
+            <li>background-image</li>
+            <li>background-repeat</li>
+            <li>background-attachment</li>
+            <li>background-position</li>
+          </ul>
+          <p>
+            It does not matter if one of the property values is missing, as long
+            as the other ones are in this order.
+          </p>
+        </article>
+      </section>
+
+      <section class="main-section" id="All_Properties">
+        <header class="section-header">All Properties</header>
+        <article>
+          <table>
+            <thead>
+              <tr>
+                <th>Property</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>background</td>
+                <td>Sets all the background properties in one declaration</td>
+              </tr>
+              <tr>
+                <td>background-attachment</td>
+                <td>
+                  Sets whether a background image is fixed or scrolls with the
+                  rest of the page
+                </td>
+              </tr>
+              <tr>
+                <td>background-clip</td>
+                <td>Specifies the painting area of the background</td>
+              </tr>
+              <tr>
+                <td>background-color</td>
+                <td>Sets the background color of an element</td>
+              </tr>
+              <tr>
+                <td>background-image</td>
+                <td>Sets the background image for an element</td>
+              </tr>
+              <tr>
+                <td>background-origin</td>
+                <td>
+                  Specifies where the background image(s) is/are positioned
+                </td>
+              </tr>
+              <tr>
+                <td>background-position</td>
+                <td>Sets the starting position of a background image</td>
+              </tr>
+              <tr>
+                <td>background-repeat</td>
+                <td>Sets how a background image will be repeated</td>
+              </tr>
+              <tr>
+                <td>background-size</td>
+                <td>Specifies the size of the background image(s)</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+      </section>
+
+      <section class="main-section" id="Reference">
+        <header class="section-header">Reference</header>
+        <article>
+          <p>
+            All the content was copied and pasted from
+            <a
+              href="https://www.w3schools.com/css/css_background.asp"
+              target="_blank"
+            >
+              W3Schools</a
+            >.
+          </p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
